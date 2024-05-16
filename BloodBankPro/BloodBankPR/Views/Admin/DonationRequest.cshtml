@@ -1,0 +1,128 @@
+﻿@model IEnumerable<BloodBankPR.Models.DonationRequestDetails>;
+@{
+    Layout = "_LayoutAdmin";
+    var list = ViewBag.book as List<BloodBankPR.Models.Book>;
+}
+<div class="pcoded-content">
+    <div class="page-header">
+        <div class="page-block">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <div class="page-header-title">
+                        <h5 class="m-b-10">Blood Dontion Request </h5>
+                        <p class="m-b-0">Display All Donation Request</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <ul class="breadcrumb-title">
+                        <li class="breadcrumb-item">
+                             <a asp-action="Index"> <i class="fa fa-home"></i> </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a asp-action="DonationRequest">Donation Request</a>
+                        </li>
+                        <li class="breadcrumb-item">
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pcoded-inner-content">
+        <!-- Main-body start -->
+        <div class="main-body">
+            <div class="page-wrapper">
+                <!-- Page-body start -->
+                <div class="page-body">
+                    <div class="card">
+                        <h5 style="margin:5px;">Filltering Donation Request</h5>
+                        <div class="card-block">
+                            <form class="form-material">
+                                <div class="form-group form-default col-3" style="display:inline-block;">
+                                    <label class="float-label" style="margin-left:5px;">Reqester Name</label>
+                                    <input type="text" name="reqName" class="form-control" required="">
+                                    <span class="form-bar"></span>
+
+                                </div>
+                                <div class="form-group form-default col-3" style="display:inline-block;">
+                                    <label class="float-label" style="margin-left:5px;">Required Quantity</label>
+                                    <input type="number" name="qnt" class="form-control" required="">
+                                    <span class="form-bar"></span>
+
+                                </div>
+                                <div class="form-group form-default col-3" style="display:inline-block;">
+
+
+                                    <div class="col-sm-12">
+                                        <label class="float-label" style="margin-left:5px;">Required Book</label>
+                                        <input type="number" name="BookName" class="form-control" required="">
+                                        <span class="form-bar"></span>
+                                        
+                                    </div>
+
+                                </div>
+                                <button type="submit" class="btn btn-info btn-round waves-effect waves-light col-2">Search</button>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- Basic table card start -->
+                    <div class="card">
+                        <div class="card-header">
+
+                                <div class="card-header-right">
+                                    <ul class="list-unstyled card-option">
+                                        <li><i class="fa fa fa-wrench open-card-option"></i></li>
+                                        <li><i class="fa fa-window-maximize full-card"></i></li>
+                                        <li><i class="fa fa-minus minimize-card"></i></li>
+                                        <li><i class="fa fa-refresh reload-card"></i></li>
+                                        @*<li><i class="fa fa-trash close-card"></i></li>*@
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-block table-border-style">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Id</th>
+                                                <th>Requester Name</th>
+                                                <th>RequiredUnit</th>
+                                                <th>BloodType</th>
+                                                <th>Donation End At</th>
+                                                <th>Details</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        @foreach(var item in Model)
+                                        {
+                                            <tr>
+                                                <th scope="row">@item.DonationRequests.Book</th>
+                                                <td>@item.User.Name</td>
+                                                
+                                              
+                                                
+                                                <td>
+                                                    <a asp-action="Donations" asp-route-id="@item.DonationRequests.Book" class="btn waves-effect waves-light btn-primary btn-outline-primary"><i class="icofont icofont-eye-alt"></i>Details</a>
+                                                </td>
+                                            </tr>
+                                        }
+                                        
+                                         
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <!-- Page-body end -->
+                </div>
+            </div>
+            <!-- Main-body end -->
+
+            <div id="styleSelector">
+            </div>
+        </div>
+    </div>

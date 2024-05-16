@@ -1,0 +1,251 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    var oNeg = ViewBag.oNeg;
+    var oPlus = ViewBag.oPlus;
+    var bNeg = ViewBag.bNeg;
+    var bPlus = ViewBag.bPlus;
+    var abNeg = ViewBag.abNeg;
+    var abPlus = ViewBag.abPlus;
+    var aPlus = ViewBag.aPlus;
+    var aNeg = ViewBag.aNeg;
+}
+<!-- Start Products  -->
+<div class="products-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="title-all text-center">
+                    <h1>Blood Unit </h1>
+                    <p>
+                        Blood unit you will find all previous requests
+                        and the available amount of Blood unit in our stores
+                    </p>
+                </div>
+            </div>
+        </div>
+        @*            <div class="row">
+        <div class="col-lg-12">
+        <div class="special-menu text-center">
+        <div class="button-group filter-button-group">
+        <button class="active" data-filter=".units">Available Unit</button>
+        <button data-filter=".top-featured">Latest Donation Request</button>
+        <button data-filter=".best-seller">Latest Blood Unit Request</button>
+        </div>
+        </div>
+        </div>
+        </div>*@
+
+        <div class="row special-list">
+            <div class="col-lg-3 col-md-6 special-grid best-seller units">
+                <div class="products-single fix">
+                    <div class="box-img-hover">
+
+                        <img src="~/Bloods/ON.png" width="150" height="150" alt="Image">
+                        <div class="mask-icon">
+                            <ul>
+                                <li>
+                                    <a asp-action="SignIn" data-toggle="tooltip" data-placement="right" title="Donate">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box2-heart" viewBox="0 0 16 16">
+                                            <path d="M8 7.982C9.664 6.309 13.825 9.236 8 13 2.175 9.236 6.336 6.31 8 7.982Z" />
+                                            <path d="M3.75 0a1 1 0 0 0-.8.4L.1 4.2a.5.5 0 0 0-.1.3V15a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V4.5a.5.5 0 0 0-.1-.3L13.05.4a1 1 0 0 0-.8-.4h-8.5Zm0 1H7.5v3h-6l2.25-3ZM8.5 4V1h3.75l2.25 3h-6ZM15 5v10H1V5h14Z" />
+                                        </svg>
+                                    </a>
+                                </li>
+
+                            </ul>
+                            <a asp-action="SignIn"></a>
+                        </div>
+                    </div>
+                    <div class="why-text">
+
+                        <h5 style="background-color:#f5f5f5; color:black">Available Copy = @oNeg</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 special-grid best-seller units">
+                <div class="products-single fix">
+                    <div class="box-img-hover">
+
+                        <img src="~/Bloods/OP.png" width="150 height="150" alt="Image">
+                        <div class="mask-icon">
+                            <ul>
+                                <li>
+                                    <a asp-action="SignIn" data-toggle="tooltip" data-placement="right" title="Donate">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box2-heart" viewBox="0 0 16 16">
+                                            <path d="M8 7.982C9.664 6.309 13.825 9.236 8 13 2.175 9.236 6.336 6.31 8 7.982Z" />
+                                            <path d="M3.75 0a1 1 0 0 0-.8.4L.1 4.2a.5.5 0 0 0-.1.3V15a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V4.5a.5.5 0 0 0-.1-.3L13.05.4a1 1 0 0 0-.8-.4h-8.5Zm0 1H7.5v3h-6l2.25-3ZM8.5 4V1h3.75l2.25 3h-6ZM15 5v10H1V5h14Z" />
+                                        </svg>
+                                    </a>
+                                </li>
+
+                            </ul>
+                            <a asp-action="SignIn"></a>
+                        </div>
+                    </div>
+                    <div class="why-text">
+
+                        <h5 style="background-color:#f5f5f5; color:black">Available Copy = @oPlus</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 special-grid best-seller units">
+                <div class="products-single fix">
+                    <div class="box-img-hover">
+
+                        <img src="~/Bloods/BN.png" width="150" height="150" alt="Image">
+                        <div class="mask-icon">
+                            <ul>
+                                <li>
+                                    <a asp-action="SignIn" data-toggle="tooltip" data-placement="right" title="Donate">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box2-heart" viewBox="0 0 16 16">
+                                            <path d="M8 7.982C9.664 6.309 13.825 9.236 8 13 2.175 9.236 6.336 6.31 8 7.982Z" />
+                                            <path d="M3.75 0a1 1 0 0 0-.8.4L.1 4.2a.5.5 0 0 0-.1.3V15a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V4.5a.5.5 0 0 0-.1-.3L13.05.4a1 1 0 0 0-.8-.4h-8.5Zm0 1H7.5v3h-6l2.25-3ZM8.5 4V1h3.75l2.25 3h-6ZM15 5v10H1V5h14Z" />
+                                        </svg>
+                                    </a>
+                                </li>
+
+                            </ul>
+                            <a asp-action="SignIn"></a>
+                        </div>
+                    </div>
+                    <div class="why-text">
+
+                        <h5 style="background-color:#f5f5f5; color:black">Available Copy = @bNeg</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 special-grid best-seller units">
+                <div class="products-single fix">
+                    <div class="box-img-hover">
+
+                        <img src="~/Bloods/BP.png" width="150" height="150" alt="Image">
+                        <div class="mask-icon">
+                            <ul>
+                                <li>
+                                    <a asp-action="SignIn" data-toggle="tooltip" data-placement="right" title="Donate">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box2-heart" viewBox="0 0 16 16">
+                                            <path d="M8 7.982C9.664 6.309 13.825 9.236 8 13 2.175 9.236 6.336 6.31 8 7.982Z" />
+                                            <path d="M3.75 0a1 1 0 0 0-.8.4L.1 4.2a.5.5 0 0 0-.1.3V15a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V4.5a.5.5 0 0 0-.1-.3L13.05.4a1 1 0 0 0-.8-.4h-8.5Zm0 1H7.5v3h-6l2.25-3ZM8.5 4V1h3.75l2.25 3h-6ZM15 5v10H1V5h14Z" />
+                                        </svg>
+                                    </a>
+                                </li>
+
+                            </ul>
+                            <a asp-action="SignIn"></a>
+                        </div>
+                    </div>
+                    <div class="why-text">
+
+                        <h5 style="background-color:#f5f5f5; color:black">Available Copy = @bPlus</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 special-grid best-seller units">
+                <div class="products-single fix">
+                    <div class="box-img-hover">
+
+                        <img src="~/Bloods/AB.jpg" width="150" height="150" alt="Image">
+                        <div class="mask-icon">
+                            <ul>
+                                <li>
+                                    <a asp-action="SignIn" data-toggle="tooltip" data-placement="right" title="Donate">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box2-heart" viewBox="0 0 16 16">
+                                            <path d="M8 7.982C9.664 6.309 13.825 9.236 8 13 2.175 9.236 6.336 6.31 8 7.982Z" />
+                                            <path d="M3.75 0a1 1 0 0 0-.8.4L.1 4.2a.5.5 0 0 0-.1.3V15a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V4.5a.5.5 0 0 0-.1-.3L13.05.4a1 1 0 0 0-.8-.4h-8.5Zm0 1H7.5v3h-6l2.25-3ZM8.5 4V1h3.75l2.25 3h-6ZM15 5v10H1V5h14Z" />
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                            <a asp-action="SignIn"></a>
+                        </div>
+                    </div>
+                    <div class="why-text">
+
+                        <h5 style="background-color:#f5f5f5; color:black">Available Copy = @abNeg</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 special-grid best-seller units">
+                <div class="products-single fix">
+                    <div class="box-img-hover">
+
+                        <img src="~/Bloods/ABP.png" width="150" height="150" alt="Image">
+                        <div class="mask-icon">
+                            <ul>
+                                <li>
+                                    <a asp-action="SignIn" data-toggle="tooltip" data-placement="right" title="Donate">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box2-heart" viewBox="0 0 16 16">
+                                            <path d="M8 7.982C9.664 6.309 13.825 9.236 8 13 2.175 9.236 6.336 6.31 8 7.982Z" />
+                                            <path d="M3.75 0a1 1 0 0 0-.8.4L.1 4.2a.5.5 0 0 0-.1.3V15a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V4.5a.5.5 0 0 0-.1-.3L13.05.4a1 1 0 0 0-.8-.4h-8.5Zm0 1H7.5v3h-6l2.25-3ZM8.5 4V1h3.75l2.25 3h-6ZM15 5v10H1V5h14Z" />
+                                        </svg>
+                                    </a>
+                                </li>
+
+                            </ul>
+                            <a asp-action="SignIn"></a>
+                        </div>
+                    </div>
+                    <div class="why-text">
+
+                        <h5 style="background-color:#f5f5f5; color:black">Available Copy = @abPlus</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 special-grid best-seller units">
+                <div class="products-single fix">
+                    <div class="box-img-hover">
+
+                        <img src="~/Bloods/AP.jpg" width="150" height="150" alt="Image">
+                        <div class="mask-icon">
+                            <ul>
+                                <li>
+                                    <a asp-action="SignIn" data-toggle="tooltip" data-placement="right" title="Donate">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box2-heart" viewBox="0 0 16 16">
+                                            <path d="M8 7.982C9.664 6.309 13.825 9.236 8 13 2.175 9.236 6.336 6.31 8 7.982Z" />
+                                            <path d="M3.75 0a1 1 0 0 0-.8.4L.1 4.2a.5.5 0 0 0-.1.3V15a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V4.5a.5.5 0 0 0-.1-.3L13.05.4a1 1 0 0 0-.8-.4h-8.5Zm0 1H7.5v3h-6l2.25-3ZM8.5 4V1h3.75l2.25 3h-6ZM15 5v10H1V5h14Z" />
+                                        </svg>
+                                    </a>
+                                </li>
+
+                            </ul>
+                            <a asp-action="SignIn"> </a>
+                        </div>
+                    </div>
+                    <div class="why-text">
+
+                        <h5 style="background-color:#f5f5f5; color:black">Available Copy = @aPlus</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 special-grid best-seller units">
+                <div class="products-single fix">
+                    <div class="box-img-hover">
+
+                        <img src="~/Bloods/Ap.png" width="100" height="150" alt="Image">
+                        <div class="mask-icon">
+                            <ul>
+                                <li>
+                                    <a asp-action="SignIn" data-toggle="tooltip" data-placement="right" title="Donate">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box2-heart" viewBox="0 0 16 16">
+                                            <path d="M8 7.982C9.664 6.309 13.825 9.236 8 13 2.175 9.236 6.336 6.31 8 7.982Z" />
+                                            <path d="M3.75 0a1 1 0 0 0-.8.4L.1 4.2a.5.5 0 0 0-.1.3V15a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V4.5a.5.5 0 0 0-.1-.3L13.05.4a1 1 0 0 0-.8-.4h-8.5Zm0 1H7.5v3h-6l2.25-3ZM8.5 4V1h3.75l2.25 3h-6ZM15 5v10H1V5h14Z" />
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                            <a asp-action="SignIn"></a>
+                        </div>
+                    </div>
+                    <div class="why-text">
+
+                        <h5 style="background-color:#f5f5f5; color:black">Available Copy = @aNeg </h5>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+<!-- End Products  -->

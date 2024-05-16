@@ -1,0 +1,231 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "_LayoutAdmin";
+    var oNeg = ViewBag.oNeg;
+    var oPlus = ViewBag.oPlus;
+    var bNeg = ViewBag.bNeg;
+    var bPlus = ViewBag.bPlus;
+    var abNeg = ViewBag.abNeg;
+    var abPlus = ViewBag.abPlus;
+    var aPlus = ViewBag.aPlus;
+    var aNeg = ViewBag.aNeg;
+}
+<div class="pcoded-content">
+    <!-- Page-header start -->
+    <div class="page-header">
+        <div class="page-block">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <div class="page-header-title">
+                        <h5 class="m-b-10">Available units</h5>
+                        <p class="m-b-0"></p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <ul class="breadcrumb-title">
+                        <li class="breadcrumb-item">
+                            <a asp-action="Index"> <i class="fa fa-home"></i> </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a asp-action="Index">Available units</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page-header end -->
+    <div class="pcoded-inner-content">
+        <!-- Main-body start -->
+        <div class="main-body">
+            <div class="page-wrapper">
+                <!-- Page-body start -->
+                <div class="page-body">
+                    <div class="row">
+                        <!-- task, page, download counter  start -->
+                        <div class="col-xl-3 col-md-3">
+                            <div class="card">
+                                <div class="card-block">
+                                    <div class="row align-items-center">
+                                        <div class="col-8">
+                                            <h4 class="text-c-red">@oNeg</h4>
+                                            <h6 class="text-muted m-b-0">Unit Ready to Use</h6>
+                                        </div>
+                                        <div class="col-4 text-right">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#ff5252" class="bi bi-droplet-fill" viewBox="0 0 16 16">
+                                                <path d="M8 16a6 6 0 0 0 6-6c0-1.655-1.122-2.904-2.432-4.362C10.254 4.176 8.75 2.503 8 0c0 0-6 5.686-6 10a6 6 0 0 0 6 6ZM6.646 4.646l.708.708c-.29.29-1.128 1.311-1.907 2.87l-.894-.448c.82-1.641 1.717-2.753 2.093-3.13Z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-c-red">
+                                    <div class="row align-items-center" style="align-content:center;color:white;font-size=22px;">
+                                    O -
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-3">
+                            <div class="card">
+                                <div class="card-block">
+                                    <div class="row align-items-center">
+                                        <div class="col-8">
+                                            <h4 class="text-c-red">@oPlus</h4>
+                                            <h6 class="text-muted m-b-0">Unit Ready to Use</h6>
+                                        </div>
+                                        <div class="col-4 text-right">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#ff5252" class="bi bi-droplet-fill" viewBox="0 0 16 16">
+                                                <path d="M8 16a6 6 0 0 0 6-6c0-1.655-1.122-2.904-2.432-4.362C10.254 4.176 8.75 2.503 8 0c0 0-6 5.686-6 10a6 6 0 0 0 6 6ZM6.646 4.646l.708.708c-.29.29-1.128 1.311-1.907 2.87l-.894-.448c.82-1.641 1.717-2.753 2.093-3.13Z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-c-red">
+                                    <div class="row align-items-center" style="align-content:center;color:white;font-size=22px;">
+                                    O +
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-3">
+                            <div class="card">
+                                <div class="card-block">
+                                    <div class="row align-items-center">
+                                        <div class="col-8">
+                                            <h4 class="text-c-red">@bNeg</h4>
+                                            <h6 class="text-muted m-b-0">Unit Ready to Use</h6>
+                                        </div>
+                                        <div class="col-4 text-right">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#ff5252" class="bi bi-droplet-fill" viewBox="0 0 16 16">
+                                                <path d="M8 16a6 6 0 0 0 6-6c0-1.655-1.122-2.904-2.432-4.362C10.254 4.176 8.75 2.503 8 0c0 0-6 5.686-6 10a6 6 0 0 0 6 6ZM6.646 4.646l.708.708c-.29.29-1.128 1.311-1.907 2.87l-.894-.448c.82-1.641 1.717-2.753 2.093-3.13Z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-c-red">
+                                    <div class="row align-items-center" style="align-content:center;color:white;font-size=22px;">
+                                    B -
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-3">
+                            <div class="card">
+                                <div class="card-block">
+                                    <div class="row align-items-center">
+                                        <div class="col-8">
+                                            <h4 class="text-c-red">@bPlus</h4>
+                                            <h6 class="text-muted m-b-0">Unit Ready to Use</h6>
+                                        </div>
+                                        <div class="col-4 text-right">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#ff5252" class="bi bi-droplet-fill" viewBox="0 0 16 16">
+                                                <path d="M8 16a6 6 0 0 0 6-6c0-1.655-1.122-2.904-2.432-4.362C10.254 4.176 8.75 2.503 8 0c0 0-6 5.686-6 10a6 6 0 0 0 6 6ZM6.646 4.646l.708.708c-.29.29-1.128 1.311-1.907 2.87l-.894-.448c.82-1.641 1.717-2.753 2.093-3.13Z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-c-red">
+                                    <div class="row align-items-center" style="align-content:center;color:white;font-size=22px;">
+                                    B +
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-3">
+                            <div class="card">
+                                <div class="card-block">
+                                    <div class="row align-items-center">
+                                        <div class="col-8">
+                                            <h4 class="text-c-red">@abNeg</h4>
+                                            <h6 class="text-muted m-b-0">Unit Ready to Use</h6>
+                                        </div>
+                                        <div class="col-4 text-right">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#ff5252" class="bi bi-droplet-fill" viewBox="0 0 16 16">
+                                                <path d="M8 16a6 6 0 0 0 6-6c0-1.655-1.122-2.904-2.432-4.362C10.254 4.176 8.75 2.503 8 0c0 0-6 5.686-6 10a6 6 0 0 0 6 6ZM6.646 4.646l.708.708c-.29.29-1.128 1.311-1.907 2.87l-.894-.448c.82-1.641 1.717-2.753 2.093-3.13Z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-c-red">
+                                    <div class="row align-items-center" style="align-content:center;color:white;font-size=22px;">
+                                    AB -
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="col-xl-3 col-md-3">
+                            <div class="card">
+                                <div class="card-block">
+                                    <div class="row align-items-center">
+                                        <div class="col-8">
+                                            <h4 class="text-c-red">@abPlus</h4>
+                                            <h6 class="text-muted m-b-0">Unit Ready to Use</h6>
+                                        </div>
+                                        <div class="col-4 text-right">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#ff5252" class="bi bi-droplet-fill" viewBox="0 0 16 16">
+                                                <path d="M8 16a6 6 0 0 0 6-6c0-1.655-1.122-2.904-2.432-4.362C10.254 4.176 8.75 2.503 8 0c0 0-6 5.686-6 10a6 6 0 0 0 6 6ZM6.646 4.646l.708.708c-.29.29-1.128 1.311-1.907 2.87l-.894-.448c.82-1.641 1.717-2.753 2.093-3.13Z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-c-red">
+                                    <div class="row align-items-center" style="align-content:center;color:white;font-size=22px;">
+                                    AB +
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="col-xl-3 col-md-3">
+                            <div class="card">
+                                <div class="card-block">
+                                    <div class="row align-items-center">
+                                        <div class="col-8">
+                                            <h4 class="text-c-red">@aPlus</h4>
+                                            <h6 class="text-muted m-b-0">Unit Ready to Use</h6>
+                                        </div>
+                                        <div class="col-4 text-right">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="5028" fill="#ff5252" class="bi bi-droplet-fill" viewBox="0 0 16 16">
+                                                <path d="M8 16a6 6 0 0 0 6-6c0-1.655-1.122-2.904-2.432-4.362C10.254 4.176 8.75 2.503 8 0c0 0-6 5.686-6 10a6 6 0 0 0 6 6ZM6.646 4.646l.708.708c-.29.29-1.128 1.311-1.907 2.87l-.894-.448c.82-1.641 1.717-2.753 2.093-3.13Z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-c-red">
+                                    <div class="row align-items-center" style="align-content:center;color:white;font-size=22px;">
+                                    A +
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-3">
+                            <div class="card">
+                                <div class="card-block">
+                                    <div class="row align-items-center">
+                                        <div class="col-8">
+                                            <h4 class="text-c-red">@aNeg</h4>
+                                            <h6 class="text-muted m-b-0">Unit Ready to Use</h6>
+                                        </div>
+                                        <div class="col-4 text-right">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#ff5252" class="bi bi-droplet-fill" viewBox="0 0 16 16">
+                                                <path d="M8 16a6 6 0 0 0 6-6c0-1.655-1.122-2.904-2.432-4.362C10.254 4.176 8.75 2.503 8 0c0 0-6 5.686-6 10a6 6 0 0 0 6 6ZM6.646 4.646l.708.708c-.29.29-1.128 1.311-1.907 2.87l-.894-.448c.82-1.641 1.717-2.753 2.093-3.13Z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-c-red">
+                                    <div class="row align-items-center"  style="align-content:center;color:white;font-size=22px;">
+                                    A -
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Page-body end -->
+            </div>
+            <div id="styleSelector"> </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,116 @@
+﻿@model BloodBankPR.Models.DonationRequestDetails;
+@{
+    Layout = "_LayoutUser";
+  
+}
+<div class="pcoded-content">
+    <div class="page-header">
+        <div class="page-block">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <div class="page-header-title">
+                        <h5 class="m-b-10">Donation Request Details</h5>
+                      
+                    </div>
+                </div>
+                @*<div class="col-md-4">
+                    <ul class="breadcrumb-title">
+                        <li class="breadcrumb-item">
+                            <a href="index.html"> <i class="fa fa-home"></i> </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a asp-action="DonationRequest">Donation Request</a>
+                        </li>
+                        <li class="breadcrumb-item">
+
+                        </li>
+                    </ul>
+                </div>*@
+            </div>
+        </div>
+    </div>
+    <div class="pcoded-inner-content">
+        <!-- Main-body start -->
+        <div class="main-body">
+            <div class="page-wrapper">
+                <!-- Page-body start -->
+                <div class="page-body">
+                    <a asp-action="Index"  class="btn waves-effect waves-light btn-primary btn-outline-primary" style="margin:8px;"><i class="icofont icofont-back"></i>Back </a>
+                    <br />
+                    <div class="card">
+                        <h5 style="margin:5px;">Donation Request Details </h5>
+                        <div class="card-block">
+                            <form class="form-material">
+                                <div class="form-group col-3" style="display:inline-block;">
+                                    <label class="col-sm-12 col-form-label">Requester Name</label>
+                                    <div class="col-sm-12">
+                                        <input type="text" readonly value="@Model.User.Name" class="form-control">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group col-3" style="display:inline-block;">
+                                    <label class="col-sm-12 col-form-label">Email</label>
+                                    <div class="col-sm-12">
+                                        <input type="text" readonly value="@Model.User.Email" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group col-3" style="display:inline-block;">
+                                    <label class="col-sm-12 col-form-label">Required Blood Type</label>
+                                    <div class="col-sm-12">
+                                        <input type="text" readonly value="@Model.Book.BookName" class="form-control">
+                                    </div>
+                                </div>
+                                
+                                
+                               
+                            </form>
+                        </div>
+                    </div>
+                    <br />
+                    <!-- Basic table card start -->
+                    <div class="card">
+                        <div class="card-header">
+
+                            <div class="card-header-right">
+                                <ul class="list-unstyled card-option">
+                                    <li><i class="fa fa fa-wrench open-card-option"></i></li>
+                                    <li><i class="fa fa-window-maximize full-card"></i></li>
+                                    <li><i class="fa fa-minus minimize-card"></i></li>
+                                    <li><i class="fa fa-refresh reload-card"></i></li>
+                                    @*<li><i class="fa fa-trash close-card"></i></li>*@
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-block table-border-style">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Id</th>
+                                            <th>Donater Name</th>
+                                            <th>Quantity</th>
+                                            <th>Donation  At</th>
+                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                      
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <!-- Page-body end -->
+            </div>
+        </div>
+        <!-- Main-body end -->
+
+        <div id="styleSelector">
+        </div>
+    </div>
+</div>
